@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List - Giao Diện Chuẩn Đề Thi</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
+        
+        <div class="app-box shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="app-title m-0">Task List</h2>
+                <button class="btn btn-add-task d-flex align-items-center gap-2" onclick="openFormForAdd()">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+
+            <div id="tasksWrapper"></div>
+        </div>
+
+        <div class="add-task-box shadow-sm" id="formContainer">
+            <button type="button" class="close-form-btn" onclick="hideFormContainer()">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <h5 class="fw-bold mb-3 text-dark" id="formTitle">Add Task</h5>
+            
+            <form id="taskForm">
+                <div class="mb-3">
+                    <label class="lbl-title fw-semibold text-secondary mb-1">Task</label>
+                    <input type="text" id="inputTaskName" class="form-control rounded-3" placeholder="Type your task here...">
+                    <div id="inputTaskError" class="invalid-feedback fw-semibold mt-1"></div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
+                    <div>
+                        <label class="lbl-title fw-semibold text-secondary mb-2">Priority</label>
+                        <div class="d-flex gap-2" id="prioBtnGroup">
+                            <button type="button" class="btn prio-btn-select btn-prio-high active" data-prio="High">High</button>
+                            <button type="button" class="btn prio-btn-select btn-prio-medium" data-prio="Medium">Medium</button>
+                            <button type="button" class="btn prio-btn-select btn-prio-low" data-prio="Low">Low</button>
+                        </div>
+                    </div>
+
+                    <div id="statusSelectGroup" style="display: none;">
+                        <label class="lbl-title fw-semibold text-secondary mb-2">Status</label>
+                        <select id="inputStatus" class="form-select status-select">
+                            <option value="To Do">To Do</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Done">Done</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" id="btnSubmitForm" class="btn btn-submit-add">Add</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

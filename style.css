@@ -1,0 +1,177 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 40px 0;
+}
+
+/* KHUNG CHÍNH (HÌNH 1): VIỀN XANH DƯƠNG BAO QUANH */
+.app-box {
+    border: 2px solid #4f75ff;
+    padding: 30px;
+    width: 100%;
+    max-width: 720px;
+    background-color: #f0f4f8;
+    border-radius: 12px;
+}
+
+.app-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #101d33;
+}
+
+/* Nút Add Task màu tím góc bo hơi vuông */
+.btn-add-task {
+    background: #6D31ED;
+    color: white;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 12px;
+    border: none;
+}
+.btn-add-task:hover {
+    background: #5621ca;
+    color: white;
+}
+
+/* HÀNG TASK CAPSULE - BO TRÒN 2 ĐẦU TUYỆT ĐỐI */
+.task-row {
+    background-color: #ffffff;
+    border-radius: 40px; /* Tạo hình viên thuốc dẹt */
+    padding: 12px 35px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.lbl-title {
+    font-size: 11px;
+    color: #9ca3af;
+    display: block;
+    margin-bottom: 1px;
+}
+.lbl-value {
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+}
+
+/* Màu sắc đậm đà cho chữ Priority */
+.prio-text-high { color: #f25555; font-weight: 700; }
+.prio-text-medium { color: #eab308; font-weight: 700; }
+.prio-text-low { color: #22c55e; font-weight: 700; }
+
+/* Khối nhãn Status chữ nhật bo nhẹ */
+.status-block {
+    background-color: #e5e7eb;
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 6px;
+    display: inline-block;
+    min-width: 85px;
+    text-align: center;
+}
+
+/* KHU VỰC ĐÚNG YÊU CẦU: BA THÀNH PHẦN NẰM SÁT NHAU BÊN PHẢI */
+.action-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Khoảng cách đều nhau giữa 3 icon */
+    justify-content: flex-end;
+    flex: 1;
+}
+
+/* Định dạng các icon */
+.status-icon {
+    font-size: 18px;
+    vertical-align: middle;
+}
+.icon-todo { color: #cbd5e1; } /* Vòng tròn rỗng xám mảnh */
+.icon-progress { color: #6D31ED; } /* Vòng tròn khuyết loading */
+.icon-done { color: #6D31ED; } /* Vòng tròn có chấm tím */
+
+.btn-action-icon {
+    background: none;
+    border: none;
+    color: #374151;
+    padding: 0;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+.btn-action-icon:hover { color: #000; }
+.btn-action-trash { color: #fca5a5; } /* Đỏ hồng nhạt đúng mẫu đề */
+.btn-action-trash:hover { color: #ef4444; }
+
+/* ==================== KHUNG ĐIỀN FORM (HÌNH 2) ==================== */
+.add-task-box {
+    border: 2px solid #4f75ff;
+    padding: 25px;
+    width: 100%;
+    max-width: 720px;
+    background-color: #ffffff;
+    margin-top: 30px;
+    border-radius: 12px;
+    position: relative;
+}
+
+#formTitle {
+    font-size: 16px;
+}
+
+#inputTaskName {
+    font-size: 14px; 
+    padding: 10px; 
+    border: 1px solid #d1d5db;
+}
+
+/* Dấu X ở góc trên bên phải khung Form */
+.close-form-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: #4b5563;
+    font-size: 18px;
+    cursor: pointer;
+}
+.close-form-btn:hover { color: #000; }
+
+/* Chọn Priority dạng Outline */
+.prio-btn-select {
+    border-radius: 8px;
+    font-size: 11px;
+    padding: 4px 14px;
+    font-weight: bold;
+    background-color: transparent;
+}
+.btn-prio-high { border: 1px solid #f25555; color: #f25555; }
+.btn-prio-high.active { background-color: #f25555; color: white; }
+
+.btn-prio-medium { border: 1px solid #eab308; color: #eab308; }
+.btn-prio-medium.active { background-color: #eab308; color: white; }
+
+.btn-prio-low { border: 1px solid #22c55e; color: #22c55e; }
+.btn-prio-low.active { background-color: #22c55e; color: white; }
+
+.status-select {
+    font-size: 13px;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    max-width: 150px;
+}
+
+.btn-submit-add {
+    background-color: #6b7280;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.btn-submit-add:hover { background-color: #4b5563; }
